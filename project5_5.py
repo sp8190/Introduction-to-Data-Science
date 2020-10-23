@@ -88,8 +88,8 @@ def gradient_descent_vectorized(X1, X2, X3, y):
         c = c - learning_rate * c_grad        
 
         if ( epoch % 1000 == 0):
-            print("epoch %d: m1_grad=%f, m2_grad=%f, m3_grad=%f, c_grad=%f, m=%f, c=%f" \
-                %(epoch, m1_grad, m2_grad, m3_grad, c_grad, m, c) )
+            print("epoch %d: m1_grad=%f, m2_grad=%f, m3_grad=%f, c_grad=%f, c=%f" \
+                %(epoch, m1_grad, m2_grad, m3_grad, c_grad, c) )
     
         if ( abs(m1_grad) < min_grad and abs(m2_grad) < min_grad and\
              abs(m3_grad) < min_grad and abs(c_grad) < min_grad ):
@@ -105,5 +105,5 @@ end_time = time.time()
 print("%f seconds" %(end_time - start_time))
 
 print("\n\nFinal:")
-print("gdv_m=%f, gdv_c=%f" %(m, c) )
-print("ls_m=%f, ls_c=%f" %(ls_m, ls_c) )
+print("gdv_m1=%f, gdv_m2=%f, gdv_m3=%f, gdv_c=%f" %(m1, m2, m3, c) )
+print("ls_m1=%f, ls_m2=%f, ls_m3=%f, ls_c=%f" %(ls_m1, ls_m2, ls_m3, ls_c) )
