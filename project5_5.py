@@ -58,8 +58,8 @@ y_pred = ls_m1*X1 + ls_m2*X2 + ls_m3*X3 + ls_c
 #plt.show()
 
 def gradient_descent_vectorized(X1, X2, X3, y):
-    epochs = 100000
-    min_grad = 0.0001
+    epochs = 4000000
+    min_grad = 0.00005
     learning_rate = 0.001
     
     m1 = 0.0
